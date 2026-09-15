@@ -1,0 +1,2213 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidang TA - Rapor Digital SMK Nangkaleah</title>
+    <meta
+      name="description"
+      content="Situs Presentasi Sidang TA: Rancang Bangun Sistem Informasi Rapor Digital Berbasis Website di SMK Nangkaleah Menggunakan Metode Waterfall dan ISO/IEC 25010:2023 oleh Ayi Muhamad Nasrulloh."
+    />
+
+    <!-- Google Fonts: Fraunces (Display), IBM Plex Sans (Body), IBM Plex Mono (Data) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Touch & Keyboard Navigation Zones -->
+    <div
+      class="nav-zone nav-prev"
+      id="nav-prev"
+      title="Slide Sebelumnya (Panah Kiri)"
+    ></div>
+    <div
+      class="nav-zone nav-next"
+      id="nav-next"
+      title="Slide Selanjutnya (Panah Kanan / Spasi)"
+    ></div>
+
+    <!-- Main Slide Deck Container -->
+    <main id="deck-container" class="deck-container">
+      <!-- SLIDE 0: Cover (Center Aligned) -->
+      <section class="slide slide-cover active" data-slide="0" id="slide-0">
+        <div class="slide-inner cover-layout">
+          <div class="cover-header">
+            <span class="cover-badge">SIDANG SKRIPSI / TUGAS AKHIR</span>
+          </div>
+          <h1 class="cover-title morph-title" id="title-0">
+            Rancang Bangun Sistem Informasi Rapor Digital Berbasis Website di
+            SMK Nangkaleah
+          </h1>
+          <p class="cover-subtitle">
+            Menggunakan Metode Waterfall dan ISO/IEC 25010:2023
+          </p>
+          <div class="cover-meta">
+            <div class="meta-author">
+              <span class="meta-name">Ayi Muhamad Nasrulloh</span>
+              <span class="meta-nim">NIM 10222058</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-institution">
+              Program Studi Informatika · Sekolah Tinggi Teknologi Cipasung ·
+              2026
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 1: Latar Belakang (Split 5/7, Aksen Red) -->
+      <section class="slide slide-split" data-slide="1" id="slide-1">
+        <div class="slide-inner grid-5-7">
+          <div class="col-left">
+            <div class="running-header">
+              <span class="running-title morph-title" id="title-1"
+                >LATAR BELAKANG MASALAH</span
+              >
+            </div>
+            <h2 class="slide-heading">
+              Pengelolaan Rapor Manual & Risk Data Corrupt
+            </h2>
+            <p class="slide-desc">
+              Pengelolaan rapor di SMK Nangkaleah masih manual menggunakan
+              Microsoft Excel dan serah terima dokumen fisik, memicu kesalahan
+              perhitungan (human error) dan risiko kehilangan/kerusakan data.
+            </p>
+
+            <div class="quote-block">
+              <p class="quote-text">
+                "Risiko file corrupt sangat tinggi karena pertukaran data nilai
+                masih mengandalkan flashdisk antar guru mapel dan wali kelas."
+              </p>
+              <div class="quote-author">Sandi Supriadi — Kaprog PPLG</div>
+            </div>
+          </div>
+
+          <div class="col-right">
+            <div class="panel-raised problem-card">
+              <h3 class="card-title text-ink-red">Dampak Operasional</h3>
+              <ul class="problem-list">
+                <li>
+                  <strong>Guru Mapel:</strong> Membutuhkan 1–2 hari penuh hanya
+                  untuk memverifikasi dan merekap nilai kelas.
+                </li>
+                <li>
+                  <strong>Wali Kelas:</strong> Membutuhkan waktu
+                  berminggu-minggu menggabungkan data dari berbagai file Excel.
+                </li>
+                <li>
+                  <strong>Orang Tua & Siswa:</strong> Tidak memiliki akses
+                  langsung untuk memantau perkembangan nilai secara real-time;
+                  rapor hanya dibagikan dalam bentuk cetak fisik.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: Rumusan Masalah (Layout 5/7) -->
+      <section class="slide slide-split" data-slide="2" id="slide-2">
+        <div class="slide-inner grid-5-7">
+          <div class="col-left">
+            <div class="running-header">
+              <span class="running-title morph-title" id="title-2"
+                >PERUMUSAN MASALAH</span
+              >
+            </div>
+            <h2 class="slide-heading">Fokus Permasalahan Penelitian</h2>
+            <p class="slide-desc">
+              Tiga pertanyaan utama yang menjadi pijakan dalam pengembangan dan
+              pengujian sistem informasi rapor digital di SMK Nangkaleah.
+            </p>
+          </div>
+
+          <div class="col-right">
+            <ol class="numbered-list">
+              <li class="num-item">
+                <span class="item-num">1</span>
+                <div class="item-content">
+                  <strong>Rancang Bangun Sistem Rapor Digital:</strong>
+                  <p>
+                    Bagaimana merancang sistem rapor digital berbasis website
+                    menggunakan metode Waterfall untuk mengatasi kendala
+                    pengolahan nilai manual?
+                  </p>
+                </div>
+              </li>
+              <li class="num-item">
+                <span class="item-num">2</span>
+                <div class="item-content">
+                  <strong>Integrasi Notifikasi WhatsApp:</strong>
+                  <p>
+                    Bagaimana merancang fitur notifikasi WhatsApp per siswa
+                    secara individual dengan satu kali klik oleh wali kelas?
+                  </p>
+                </div>
+              </li>
+              <li class="num-item">
+                <span class="item-num">3</span>
+                <div class="item-content">
+                  <strong>Pengujian Standar ISO/IEC 25010:2023:</strong>
+                  <p>
+                    Bagaimana menguji tingkat kualitas, keamanan, dan kelayakan
+                    sistem berdasarkan pedoman ISO/IEC 25010:2023?
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: Tujuan Penelitian (Visual Pairing dengan Slide 2) -->
+      <section class="slide slide-split" data-slide="3" id="slide-3">
+        <div class="slide-inner grid-5-7">
+          <div class="col-left">
+            <div class="running-header">
+              <span class="running-title morph-title" id="title-3"
+                >TUJUAN PENELITIAN</span
+              >
+            </div>
+            <h2 class="slide-heading">Target Solusi yang Dihasilkan</h2>
+            <p class="slide-desc">
+              Pencapaian konkret yang dirancang untuk menjawab secara langsung
+              setiap poin rumusan masalah.
+            </p>
+          </div>
+
+          <div class="col-right">
+            <div class="target-cards-stack">
+              <div class="target-card">
+                <div class="target-badge">Tujuan 1</div>
+                <p>
+                  Menghasilkan Sistem Informasi Rapor Digital berbasis website
+                  menggunakan metode Waterfall yang mengotomatisasi pengolahan
+                  nilai dan terpusat.
+                </p>
+              </div>
+              <div class="target-card">
+                <div class="target-badge">Tujuan 2</div>
+                <p>
+                  Menghasilkan fitur notifikasi WhatsApp per siswa via tombol
+                  <code class="mono-code">"Send Notif"</code> untuk pengiriman
+                  nilai secara privat oleh wali kelas.
+                </p>
+              </div>
+              <div class="target-card">
+                <div class="target-badge">Tujuan 3</div>
+                <p>
+                  Mengevaluasi kelayakan sistem melalui pengujian ISO/IEC
+                  25010:2023 (Functional Suitability, Usability, Security,
+                  Portability).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: Batasan Masalah -->
+      <section class="slide slide-split" data-slide="4" id="slide-4">
+        <div class="slide-inner grid-5-7">
+          <div class="col-left">
+            <div class="running-header">
+              <span class="running-title morph-title" id="title-4"
+                >BATASAN PENELITIAN</span
+              >
+            </div>
+            <h2 class="slide-heading">Ruang Lingkup & Batasan Sistem</h2>
+            <p class="slide-desc">
+              Penetapan batasan operasional agar pengembangan sistem tetap
+              terarah dan fokus pada kebutuhan mendesak sekolah.
+            </p>
+          </div>
+
+          <div class="col-right">
+            <ul class="boundary-list">
+              <li>
+                <span class="bound-tag">01 / Arsitektur</span>
+                <p>
+                  Sistem berbasis website yang difokuskan pada digitalisasi
+                  input, pengolahan, penyimpanan, dan penyajian laporan
+                  akademik.
+                </p>
+              </li>
+              <li>
+                <span class="bound-tag">02 / Fitur WA</span>
+                <p>
+                  Notifikasi WhatsApp dikirimkan manual per siswa (individual &
+                  privat) oleh wali kelas, bukan secara serentak/broadcast.
+                </p>
+              </li>
+              <li>
+                <span class="bound-tag">03 / Standar Kualitas</span>
+                <p>
+                  Evaluasi produk diukur eksklusif pada 4 aspek ISO 25010:2023:
+                  Functional Suitability, Usability, Security, dan Portability.
+                </p>
+              </li>
+              <li>
+                <span class="bound-tag">04 / Hak Akses</span>
+                <p>
+                  Pengguna terbagi atas 5 role: Tata Usaha (TU), Guru Mapel,
+                  Wali Kelas, Kepala Sekolah, dan Siswa.
+                </p>
+              </li>
+              <li>
+                <span class="bound-tag">05 / Siklus SDLC</span>
+                <p>
+                  Pengembangan metode Waterfall hanya sampai pada tahap
+                  pengujian (Testing) dan tidak mencakup tahap Maintenance.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: Metodologi Waterfall — Visual Stepped Cascade / "Air Terjun" Blueprint -->
+      <section class="slide slide-full" data-slide="5" id="slide-5">
+        <div class="slide-inner">
+          <div class="running-header">
+            <span class="running-title morph-title" id="title-5"
+              >METODOLOGI PENELITIAN — WATERFALL</span
+            >
+          </div>
+          <h2 class="slide-heading">Alur Sekuensial Model Air Terjun</h2>
+
+          <!-- Cascading Staircase Blueprint Diagram -->
+          <div class="waterfall-cascade-container">
+            <div class="wf-cascade-step step-1">
+              <div class="cascade-badge">FASE 01</div>
+              <div class="cascade-box">
+                <div class="box-head">
+                  <span class="step-num">01</span>
+                  <h4>Requirement Analysis</h4>
+                </div>
+                <p>
+                  Observasi & wawancara mendalam dengan Kaprog PPLG Sandi
+                  Supriadi & Guru Mapel Ibu Tuti untuk analisis kebutuhan
+                  fungsional & non-fungsional.
+                </p>
+              </div>
+              <div class="cascade-connector">
+                <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
+                  <path
+                    d="M10 0 V25 H50 V40"
+                    stroke="var(--chalk-dim)"
+                    stroke-width="1.5"
+                    stroke-dasharray="4 3"
+                  />
+                  <polygon points="46,35 50,40 54,35" fill="var(--chalk-dim)" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="wf-cascade-step step-2">
+              <div class="cascade-badge">FASE 02</div>
+              <div class="cascade-box">
+                <div class="box-head">
+                  <span class="step-num">02</span>
+                  <h4>System Design</h4>
+                </div>
+                <p>
+                  Pemodelan UML (Use Case, Activity, Sequence Diagram),
+                  perancangan 9 entitas ERD database PostgreSQL, dan wireframe
+                  antarmuka.
+                </p>
+              </div>
+              <div class="cascade-connector">
+                <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
+                  <path
+                    d="M10 0 V25 H50 V40"
+                    stroke="var(--chalk-dim)"
+                    stroke-width="1.5"
+                    stroke-dasharray="4 3"
+                  />
+                  <polygon points="46,35 50,40 54,35" fill="var(--chalk-dim)" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="wf-cascade-step step-3">
+              <div class="cascade-badge">FASE 03</div>
+              <div class="cascade-box">
+                <div class="box-head">
+                  <span class="step-num">03</span>
+                  <h4>Implementation</h4>
+                </div>
+                <p>
+                  Penulisan kode frontend React JavaScript, pengolahan backend
+                  Supabase (BaaS) & Row Level Security, serta pengintegrasian
+                  jsPDF.
+                </p>
+              </div>
+              <div class="cascade-connector">
+                <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
+                  <path
+                    d="M10 0 V25 H50 V40"
+                    stroke="var(--seal-gold)"
+                    stroke-width="2"
+                  />
+                  <polygon points="46,35 50,40 54,35" fill="var(--seal-gold)" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="wf-cascade-step step-4 highlight-cascade">
+              <div class="cascade-badge text-seal-gold">
+                FASE 04 · TITIK AKHIR
+              </div>
+              <div class="cascade-box gold-border">
+                <div class="box-head">
+                  <span class="step-num text-seal-gold">04</span>
+                  <h4 class="text-seal-gold">Testing (ISO/IEC 25010:2023)</h4>
+                </div>
+                <p>
+                  Pengujian komprehensif 4 aspek kualitas (Functional,
+                  Usability, Security, Portability). <br /><em
+                    >*Penelitian berhenti di sini (tanpa Maintenance).</em
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: Metodologi ISO/IEC 25010:2023 -->
+      <section class="slide slide-full" data-slide="6" id="slide-6">
+        <div class="slide-inner">
+          <div class="running-header">
+            <span class="running-title morph-title" id="title-6"
+              >METODOLOGI — ISO/IEC 25010:2023</span
+            >
+          </div>
+          <h2 class="slide-heading">4 Karakteristik Pengujian Kualitas</h2>
+
+          <div class="grid-4-cards">
+            <div class="iso-card">
+              <div class="iso-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M9 11l3 3L22 4" />
+                  <path
+                    d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"
+                  />
+                </svg>
+              </div>
+              <h4>Functional Suitability</h4>
+              <p>
+                Mengevaluasi kesesuaian fungsi aplikasi dengan 7 kebutuhan
+                fungsional via Black Box Testing.
+              </p>
+              <p class="sub-characteristics">
+                <span>• Functional Completeness</span>
+                <span>• Functional Correctness</span>
+                <span>• Functional Appropriateness</span>
+              </p>
+            </div>
+
+            <div class="iso-card">
+              <div class="iso-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                  <path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+              </div>
+              <h4>Usability</h4>
+              <p>
+                Mengukur kemudahan penggunaan sistem oleh responden mengacu pada
+                kuesioner System Usability Scale (SUS).
+              </p>
+            </div>
+
+            <div class="iso-card">
+              <div class="iso-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="3" y="11" width="18" height="11" rx="0" />
+                  <path d="M7 11V7a5 5 0 0110 0v4" />
+                </svg>
+              </div>
+              <h4>Security</h4>
+              <p>
+                Menguji ketahanan keamanan data terpusat menggunakan OWASP ZAP
+                DAST scan + pengujian otorisasi manual RLS.
+              </p>
+            </div>
+
+            <div class="iso-card">
+              <div class="iso-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="0" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <h4>Portability</h4>
+              <p>
+                Memastikan kelancaran sistem saat dibuka di 5 kombinasi
+                perangkat desktop, laptop, & HP/Tablet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: Kebutuhan Sistem (Tabel Fungsional vs Non-Fungsional) -->
+      <section class="slide slide-full" data-slide="7" id="slide-7">
+        <div class="slide-inner">
+          <div class="running-header">
+            <span class="running-title morph-title" id="title-7"
+              >ANALISIS KEBUTUHAN SISTEM</span
+            >
+          </div>
+          <h2 class="slide-heading">
+            Pemetaan Kebutuhan Fungsional & Non-Fungsional
+          </h2>
+
+          <div class="grid-2-tables">
+            <div class="table-wrapper">
+              <h3 class="table-caption">
+                Kebutuhan Fungsional (7 Fitur Utama)
+              </h3>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Fitur</th>
+                    <th>Deskripsi Skema Operasional</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Hak Akses Berjenjang</td>
+                    <td>
+                      Login membedakan peran TU, Guru Mapel, Wali Kelas, Kepsek,
+                      & Siswa.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Input Nilai</td>
+                    <td>
+                      Guru mapel menginput nilai harian, PTS, dan PAS secara
+                      langsung.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Kalkulasi Otomatis</td>
+                    <td>
+                      Sistem menghitung nilai akhir, predikat, & deskripsi
+                      capaian otomatis.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Pemantauan Real-Time</td>
+                    <td>
+                      Wali kelas melihat rekapitulasi nilai kelas & grafik
+                      perkembangan.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Koreksi Data</td>
+                    <td>
+                      Opsi pembaruan nilai praktis untuk menangani kesalahan
+                      ketik.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Akses Evaluasi</td>
+                    <td>
+                      Siswa melihat hasil rapor secara online dari mana saja.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Cetak Rapor</td>
+                    <td>
+                      Fitur pencetakan PDF resmi untuk birokrasi legalisir
+                      dokumen.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-wrapper">
+              <h3 class="table-caption">Kebutuhan Non-Fungsional</h3>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Aspek</th>
+                    <th>Kriteria Standar Kualitas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Performance</td>
+                    <td>
+                      Memangkas waktu pengolahan nilai dari berminggu-minggu
+                      menjadi hitungan jam.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Security</td>
+                    <td>
+                      Penyimpanan terpusat database server meminimalkan risiko
+                      file corrupt/virus.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Portability</td>
+                    <td>
+                      Antarmuka responsif nyaman di laptop (input guru) maupun
+                      HP (siswa).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Usability</td>
+                    <td>
+                      UI intuitif & mudah dipelajari oleh guru senior tanpa
+                      pelatihan rumit.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: Perancangan Aktor & Use Case (Morph Titik 1: 5 Aktor) -->
+      <section class="slide slide-full" data-slide="8" id="slide-8">
+        <div class="slide-inner">
+          <div class="running-header">
+            <span class="running-title morph-title" id="title-8"
+              >PERANCANGAN SISTEM — 5 AKTOR</span
+            >
+          </div>
+          <h2 class="slide-heading">
+            Pemetaan Hak Akses & Use Case Representatif
+          </h2>
+
+          <div class="actors-grid">
+            <div class="actor-card morph-actor" id="actor-tu">
+              <div class="actor-header">
+                <span class="actor-role">TU</span>
+                <h4>Tata Usaha</h4>
+              </div>
+              <ul class="actor-uc-list">
+                <li>Kelola data master siswa, kelas, & mapel</li>
+                <li>Kelola akun pengguna & jadwal mengajar</li>
+                <li>Input data absensi harian per kelas</li>
+              </ul>
+            </div>
+
+            <div class="actor-card morph-actor" id="actor-guru">
+              <div class="actor-header">
+                <span class="actor-role">GURU</span>
+                <h4>Guru Mapel</h4>
+              </div>
+              <ul class="actor-uc-list">
+                <li>Input nilai Harian, PTS, & PAS</li>
+                <li>Koreksi / edit nilai salah ketik</li>
+              </ul>
+            </div>
+
+            <div class="actor-card morph-actor" id="actor-wakel">
+              <div class="actor-header">
+                <span class="actor-role">WAKEL</span>
+                <h4>Wali Kelas</h4>
+              </div>
+              <ul class="actor-uc-list">
+                <li>Pantau nilai real-time & grafik kelas</li>
+                <li>Input catatan perkembangan wali kelas</li>
+                <li>Rekap, validasi, & cetak/terbit rapor</li>
+              </ul>
+            </div>
+
+            <div class="actor-card morph-actor" id="actor-kepsek">
+              <div class="actor-header">
+                <span class="actor-role">KEPSEK</span>
+                <h4>Kepala Sekolah</h4>
+              </div>
+              <div class="seal-gold-badge morph-seal" id="gold-seal-sm">
+                SEAL
+              </div>
+              <ul class="actor-uc-list">
+                <li>Approve & Tanda Tangan Digital Rapor</li>
+                <li>Pantau laporan & statistik akademik</li>
+              </ul>
+            </div>
+
+            <div class="actor-card morph-actor" id="actor-siswa">
+              <div class="actor-header">
+                <span class="actor-role">SISWA</span>
+                <h4>Siswa</h4>
+              </div>
+              <ul class="actor-uc-list">
+                <li>Pantau hasil evaluasi rapor online</li>
+                <li>Unduh dokumen PDF rapor resmi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: Perancangan ERD (Gambar Asli dbdiagram.io) -->
+      <section class="slide slide-full" data-slide="9" id="slide-9">
+        <div class="slide-inner">
+          <div class="running-header">
+            <span class="running-title morph-title" id="title-9"
+              >PERANCANGAN BASIS DATA — ERD</span
+            >
+          </div>
+          <h2 class="slide-heading">
+            Entity Relationship Diagram (9 Tabel Utama)
+          </h2>
+
+          <div class="erd-image-viewer panel-raised">
+            <img
+              src="img/erd_diagram.png"
+              alt="Diagram ERD dbdiagram.io"
+              class="erd-diagram-img"
+            />
+            <div class="erd-image-caption">
+              <span class="data-mono"
+                >Skema Diagram Basis Data (dbdiagram.io) — 9 Tabel Relasional
+                PostgreSQL</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: Implementasi Stack & Wireframe Grid -->
+      <section class="slide slide-split" data-slide="10" id="slide-10">
+        <div class="slide-inner grid-4-8">
+          <div class="col-left">
+            <div class="running-header">
+              <span class="running-title morph-title" id="title-10"
+                >IMPLEMENTASI SISTEM</span
+              >
+            </div>
+            <h2 class="slide-heading">Stack Teknologi & Arsitektur</h2>
+            <div class="tech-stack-list">
+              <div class="tech-item">
+                <strong>Frontend:</strong>
+                <p>React JavaScript (UI Dinamis & Interaktif)</p>
+              </div>
+              <div class="tech-item">
+                <strong>Backend (BaaS):</strong>
+                <p>
+                  Supabase (PostgreSQL, Autentikasi, REST API, & Row Level
+                  Security)
+                </p>
+              </div>
+              <div class="tech-item">
+                <strong>Dokumen Export:</strong>
+                <p>jsPDF (Rendering PDF Rapor A4)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-right">
+            <div class="mockup-grid">
+              <div class="mockup-card">
+                <div class="mockup-bar">Halaman Login</div>
+                <div class="mockup-img-wrapper">
+                  <img
+                    src="img/LOGIN.png"
+                    alt="Halaman Login"
+                    class="mockup-img"
+                  />
+                </div>
+              </div>
+
+              <div class="mockup-card">
+                <div class="mockup-bar">Input Nilai Guru</div>
+                <div class="mockup-img-wrapper">
+                  <img
+                    src="img/input nilai mapel.png"
+                    alt="Input Nilai Guru"
+                    class="mockup-img"
+                  />
+                </div>
+              </div>
+
+              <div class="mockup-card">
+                <div class="mockup-bar">Dashboard Wali Kelas</div>
+                <div class="mockup-img-wrapper">
+                  <img
+                    src="img/beranda wakel.png"
+                    alt="Dashboard Wali Kelas"
+                    class="mockup-img"
+                  />
+                </div>
+              </div>
+
+              <div class="mockup-card">
+                <div class="mockup-bar">Cetak Rapor Digital</div>
+                <div class="mockup-img-wrapper">
+                  <img
+                    src="img/cetak rapor wakel.png"
+                    alt="Cetak Rapor Digital"
+                    class="mockup-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: Fitur Unggulan WhatsApp -->
+      <section class="slide slide-center-layout" data-slide="11" id="slide-11">
+        <div class="slide-inner center-box">
+          <div class="running-header">
+            <span class="running-title morph-title" id="title-11"
+              >FITUR UNGGULAN</span
+            >
+          </div>
+          <h2 class="slide-heading">Notifikasi WhatsApp Satu Klik Per Siswa</h2>
+
+          <div class="wa-feature-box panel-raised">
+            <div class="wa-icon-stub">WhatsApp API</div>
+            <p class="wa-desc">
+              Wali kelas dapat mengirimkan hasil evaluasi belajar langsung
+              kepada orang tua/wali murid secara
+              <strong>individual dan privat</strong> melalui tombol
+              <code class="mono-code">"Send Notif"</code> pada setiap baris data
+              siswa.
+            </p>
+            <div class="wa-highlights">
+              <span class="wa-tag">✓ Tanpa Broadcast Publik</span>
+              <span class="wa-tag">✓ Notifikasi Kerahasiaan Privat</span>
+              <span class="wa-tag">✓ Efisiensi Komunikasi Ortu Pesantren</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: Pengujian Functional Suitability (100% Hero) -->
+      <section class="slide slide-split" data-slide="12" id="slide-12">
+        <div class="slide-inner grid-5-7">
+          <div class="col-left">
+            <div class="running-header">
+              <span class="running-title morph-title" id="title-12"
+                >PENGUJIAN KUALITAS — FUNCTIONAL</span
+              >
+            </div>
+            <h2 class="slide-heading">Functional Suitability</h2>
+            <p class="slide-desc">
+              Black Box Testing menguji 7/7 test case fungsional menggunakan 5
+              teknik: Equivalence Partitioning, Boundary Value Analysis,
+              Decision Table, State Transition, dan Scenario-Based Testing.
+            </p>
+            <div class="sub-characteristics">
+              <span>• Functional Completeness</span>
+              <span>• Functional Correctness</span>
+              <span>• Functional Appropriateness</span>
+            </div>
+          </div>
+
+          <div class="col-right center-hero-col">
+            <div class="hero-stat-box">
+              <div
+                class="hero-number text-seal-gold morph-stat"
+                id="stat-functional"
+              >
+                100%
+              </div>
+              <div class="hero-label">Functional Suitability Rate</div>
+              <div class="hero-status">
+                7 / 7 Test Case Valid (Sangat Layak)
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 13: Pengujian Usability (SUS 72,12 Hero + BAR CHART VISUAL PER ROLE) -->
+      <section class="slide slide-split" data-slide="13" id="slide-13">
+        <div class="slide-inner grid-5-7">
+          <div class="col-left">
+            <div class="running-header">
+              <span class="running-title morph-title" id="title-13"
+                >PENGUJIAN KUALITAS — USABILITY</span
+              >
+            </div>
+            <h2 class="slide-heading">System Usability Scale (SUS)</h2>
+
+            <div class="hero-stat-inline">
+              <div class="hero-number morph-stat" id="stat-usability">
+                72,12
+              </div>
+              <div class="sus-meta-badge">Grade C+ · Acceptable · Passive</div>
+            </div>
+
+            <p class="slide-desc">
+              Evaluasi kebergunaan melibatkan
+              <strong>66 responden</strong> pengguna akhir sistem di SMK
+              Nangkaleah.
+            </p>
+          </div>
+
+          <div class="col-right">
+            <div class="panel-raised chart-panel">
+              <h3 class="card-title">
+                Grafik Skor SUS Berdasarkan Peran (Scale 0–100)
+              </h3>
+
+              <!-- Horizontal Visual Bar Chart for SUS Scores -->
+              <div class="bar-chart-container">
+                <div class="bar-chart-row">
+                  <div class="bar-role">Guru Mapel (10)</div>
+                  <div class="bar-track">
+                    <div class="bar-fill" style="width: 83%"></div>
+                  </div>
+                  <div class="bar-value data-mono">83,00</div>
+                </div>
+
+                <div class="bar-chart-row">
+                  <div class="bar-role">Kepala Sekolah (1)</div>
+                  <div class="bar-track">
+                    <div class="bar-fill" style="width: 82.5%"></div>
+                  </div>
+                  <div class="bar-value data-mono">82,50</div>
+                </div>
+
+                <div class="bar-chart-row">
+                  <div class="bar-role">Tata Usaha (1)</div>
+                  <div class="bar-track">
+                    <div class="bar-fill" style="width: 82.5%"></div>
+                  </div>
+                  <div class="bar-value data-mono">82,50</div>
+                </div>
+
+                <div class="bar-chart-row">
+                  <div class="bar-role">Wali Kelas (6)</div>
+                  <div class="bar-track">
+                    <div class="bar-fill" style="width: 80.83%"></div>
+                  </div>
+                  <div class="bar-value data-mono">80,83</div>
+                </div>
+
+                <div class="bar-chart-row">
+                  <div class="bar-role">Siswa (48)</div>
+                  <div class="bar-track">
+                    <div class="bar-fill" style="width: 68.33%"></div>
+                  </div>
+                  <div class="bar-value data-mono">68,33</div>
+                </div>
+              </div>
+
+              <!-- Average Line Metric Graphic -->
+              <div class="chart-summary-line">
+                <span class="summary-label"
+                  >RATA-RATA KESELURUHAN (66 Responden):</span
+                >
+                <span class="summary-val data-mono text-seal-gold"
+                  >72,12 / 100</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 14: Pengujian Security (Before/After Klimaks Merah -> Emas + VISUAL COMPARISON GRAPHIC) -->
+      <section class="slide slide-split" data-slide="14" id="slide-14">
+        <div class="slide-inner grid-5-7">
+          <div class="col-left">
+            <div class="running-header">
+              <span class="running-title morph-title" id="title-14"
+                >PENGUJIAN KUALITAS — SECURITY</span
+              >
+            </div>
+            <h2 class="slide-heading">Security Testing & RLS Fix</h2>
+            <p class="slide-desc">
+              Pengujian DAST menggunakan OWASP ZAP (15 passive alerts
+              Low-Medium, 0 active scan alert) + manual API testing 4 skenario
+              otorisasi RLS.
+            </p>
+
+            <!-- OWASP ZAP Badges Graphic -->
+            <div class="security-metrics-visual">
+              <div class="sec-metric-card">
+                <span class="sec-val data-mono">15</span>
+                <span class="sec-lbl">Passive Scan Alerts (Low–Med)</span>
+              </div>
+              <div class="sec-metric-card">
+                <span class="sec-val data-mono text-seal-gold">0</span>
+                <span class="sec-lbl"
+                  >Active Scan New Alerts (23 Requests)</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-right">
+            <div class="before-after-container">
+              <div class="panel-raised before-card">
+                <span class="ba-label text-ink-red">Sebelum Perbaikan RLS</span>
+                <div class="ba-stat text-ink-red">75%</div>
+
+                <!-- Progress Bar Visual Before -->
+                <div class="metric-bar-track">
+                  <div
+                    class="metric-bar-fill bg-ink-red"
+                    style="width: 75%"
+                  ></div>
+                </div>
+
+                <p class="ba-desc">
+                  Celah SC-06: RLS <code class="mono-code">users</code> memakai
+                  <code class="mono-code">auth.role() = 'authenticated'</code>
+                  sehingga siswa dapat membaca 109 baris data akun pengguna
+                  lain.
+                </p>
+              </div>
+
+              <div class="panel-raised after-card">
+                <span class="ba-label text-seal-gold"
+                  >Sesudah Perbaikan RLS</span
+                >
+                <div
+                  class="ba-stat text-seal-gold morph-stat"
+                  id="stat-security"
+                >
+                  100%
+                </div>
+
+                <!-- Progress Bar Visual After -->
+                <div class="metric-bar-track">
+                  <div
+                    class="metric-bar-fill bg-seal-gold"
+                    style="width: 100%"
+                  ></div>
+                </div>
+
+                <p class="ba-desc">
+                  Pass Rate 4/4 Skenario. Akses SELECT tabel
+                  <code class="mono-code">users</code> dibatasi ketat hanya
+                  untuk baris milik sendiri (kecuali TU & Kepsek).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 15: Pengujian Portability (3,90 Hero + VISUAL COMPATIBILITY BAR GRAPHIC) -->
+      <section class="slide slide-split" data-slide="15" id="slide-15">
+        <div class="slide-inner grid-5-7">
+          <div class="col-left">
+            <div class="running-header">
+              <span class="running-title morph-title" id="title-15"
+                >PENGUJIAN KUALITAS — PORTABILITY</span
+              >
+            </div>
+            <h2 class="slide-heading">Portability & Compatibility</h2>
+
+            <div class="hero-stat-inline">
+              <div class="hero-number morph-stat" id="stat-portability">
+                3,90
+              </div>
+              <div class="sus-meta-badge">
+                Kategori Baik (Skala 1,00 - 5,00)
+              </div>
+            </div>
+
+            <p class="slide-desc">
+              Pengujian Adaptability memastikan antarmuka berjalan normal lintas
+              5 kombinasi perangkat dan browser tanpa layout overflow.
+            </p>
+          </div>
+
+          <div class="col-right">
+            <div class="panel-raised chart-panel">
+              <h3 class="card-title">
+                Matriks Responsivitas 5 Perangkat / Browser
+              </h3>
+
+              <!-- Visual Device Meter Bars -->
+              <div class="device-meter-list">
+                <div class="device-item">
+                  <div class="device-info">
+                    <span class="dev-name">Google Chrome (Desktop)</span>
+                    <span class="dev-status text-seal-gold data-mono"
+                      >100% NORMAL</span
+                    >
+                  </div>
+                  <div class="dev-bar-track">
+                    <div class="dev-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <div class="device-item">
+                  <div class="device-info">
+                    <span class="dev-name">Mozilla Firefox (Desktop)</span>
+                    <span class="dev-status text-seal-gold data-mono"
+                      >100% NORMAL</span
+                    >
+                  </div>
+                  <div class="dev-bar-track">
+                    <div class="dev-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <div class="device-item">
+                  <div class="device-info">
+                    <span class="dev-name">Microsoft Edge (Desktop)</span>
+                    <span class="dev-status text-seal-gold data-mono"
+                      >100% NORMAL</span
+                    >
+                  </div>
+                  <div class="dev-bar-track">
+                    <div class="dev-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <div class="device-item">
+                  <div class="device-info">
+                    <span class="dev-name">Chrome Android (Smartphone)</span>
+                    <span class="dev-status text-seal-gold data-mono"
+                      >100% NORMAL</span
+                    >
+                  </div>
+                  <div class="dev-bar-track">
+                    <div class="dev-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <div class="device-item">
+                  <div class="device-info">
+                    <span class="dev-name">Tablet (Android / iOS)</span>
+                    <span class="dev-status text-seal-gold data-mono"
+                      >100% NORMAL</span
+                    >
+                  </div>
+                  <div class="dev-bar-track">
+                    <div class="dev-bar-fill" style="width: 100%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 16: Rekap Hasil Pengujian (TITIK MORPH LANDING PAGE 4 HERO STATS + VISUAL SUMMARY GRAPHIC) -->
+      <section class="slide slide-full" data-slide="16" id="slide-16">
+        <div class="slide-inner">
+          <div class="running-header">
+            <span class="running-title morph-title" id="title-16"
+              >REKAPITULASI HASIL PENGUJIAN</span
+            >
+          </div>
+          <h2 class="slide-heading">
+            Rekap Evaluasi 4 Aspek ISO/IEC 25010:2023
+          </h2>
+
+          <!-- Grid Split: Table on Left, Visual Progress Graphic Cards on Right -->
+          <div class="grid-5-7 recap-split-layout">
+            <div class="col-left full-w-mobile">
+              <div class="recap-table-wrapper panel-raised">
+                <table class="data-table recap-table">
+                  <thead>
+                    <tr>
+                      <th>Aspek Pengujian ISO 25010</th>
+                      <th>Hasil Metrik</th>
+                      <th>Kategori Kelayakan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Functional Suitability</strong></td>
+                      <td>
+                        <span
+                          class="data-mono text-seal-gold morph-land"
+                          id="land-functional"
+                          >100%</span
+                        >
+                      </td>
+                      <td>Sangat Layak</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Usability (SUS)</strong></td>
+                      <td>
+                        <span class="data-mono morph-land" id="land-usability"
+                          >72,12</span
+                        >
+                      </td>
+                      <td>Acceptable (Grade C+)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Security</strong></td>
+                      <td>
+                        <span
+                          class="data-mono text-seal-gold morph-land"
+                          id="land-security"
+                          >75% → 100%</span
+                        >
+                      </td>
+                      <td>Layak (setelah perbaikan)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Portability</strong></td>
+                      <td>
+                        <span class="data-mono morph-land" id="land-portability"
+                          >3,90</span
+                        >
+                      </td>
+                      <td>Baik</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-right full-w-mobile">
+              <div class="panel-raised visual-recap-cards">
+                <h3 class="card-title">
+                  Visualisasi Pemenuhan Standar Kualitas
+                </h3>
+
+                <div class="recap-metric-item">
+                  <div class="rm-head">
+                    <span>Functional Suitability</span>
+                    <span class="data-mono text-seal-gold">100%</span>
+                  </div>
+                  <div class="rm-bar-track">
+                    <div
+                      class="rm-bar-fill gold-fill"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="recap-metric-item">
+                  <div class="rm-head">
+                    <span>Usability (SUS Scale)</span>
+                    <span class="data-mono">72,12 / 100</span>
+                  </div>
+                  <div class="rm-bar-track">
+                    <div
+                      class="rm-bar-fill chalk-fill"
+                      style="width: 72.12%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="recap-metric-item">
+                  <div class="rm-head">
+                    <span>Security (Pass Rate)</span>
+                    <span class="data-mono text-seal-gold">100%</span>
+                  </div>
+                  <div class="rm-bar-track">
+                    <div
+                      class="rm-bar-fill gold-fill"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="recap-metric-item">
+                  <div class="rm-head">
+                    <span>Portability (Skala 5.0)</span>
+                    <span class="data-mono">3,90 / 5,00 (78%)</span>
+                  </div>
+                  <div class="rm-bar-track">
+                    <div
+                      class="rm-bar-fill chalk-fill"
+                      style="width: 78%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 17: Kesimpulan (3 Poin & Gold Seal Morph Landing) -->
+      <section class="slide slide-split" data-slide="17" id="slide-17">
+        <div class="slide-inner grid-5-7">
+          <div class="col-left">
+            <div class="running-header">
+              <span class="running-title morph-title" id="title-17"
+                >KESIMPULAN PENELITIAN</span
+              >
+            </div>
+            <h2 class="slide-heading">Kesimpulan Akhir</h2>
+            <p class="slide-desc">
+              Tiga poin utama yang menutup lingkaran naratif perancangan dan
+              pengujian sistem informasi rapor digital SMK Nangkaleah.
+            </p>
+          </div>
+
+          <div class="col-right seal-landing-col">
+            <div class="conclusion-box panel-raised">
+              <ol class="conclusion-list">
+                <li>
+                  <strong>Otomatisasi & Penyimpanan Terpusat:</strong>
+                  Sistem informasi rapor digital berbasis website berhasil
+                  dirancang menggunakan metode Waterfall untuk mengotomatisasi
+                  pengolahan nilai dan menghilangkan risiko hilangnya fisik
+                  dokumen.
+                </li>
+                <li>
+                  <strong>Fitur Notifikasi WhatsApp:</strong>
+                  Fitur notifikasi WhatsApp per siswa via tombol "Send Notif"
+                  berhasil diimplementasikan dengan 100% Functional Suitability
+                  Rate.
+                </li>
+                <li>
+                  <strong>Kelayakan ISO/IEC 25010:2023:</strong>
+                  Sistem terbukti sangat layak diimplementasikan di SMK
+                  Nangkaleah berdasarkan evaluasi Functional (100%), Usability
+                  (72,12), Security (100%), dan Portability (3,90).
+                </li>
+              </ol>
+              <!-- Large Gold Seal (Only 50% border radius element) -->
+              <div class="gold-seal-large morph-seal" id="gold-seal-lg">
+                <div class="seal-inner-circle">
+                  <span class="seal-text-top">TERVALIDASI</span>
+                  <span class="seal-star">★</span>
+                  <span class="seal-text-bot">SMK NANGKALEAH</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 18: Saran & Penutup (Center Aligned) -->
+      <section class="slide slide-cover" data-slide="18" id="slide-18">
+        <div class="slide-inner cover-layout">
+          <div class="running-header">
+            <span class="running-title morph-title" id="title-18"
+              >SARAN & PENUTUP</span
+            >
+          </div>
+          <h2 class="cover-title">Rekomendasi Pengembangan Selanjutnya</h2>
+
+          <div class="saran-grid">
+            <div class="saran-card">
+              <span class="saran-num">01</span>
+              <p>
+                Pengembangan fitur notifikasi WhatsApp secara massal / broadcast
+                per kelas untuk meningkatkan efisiensi waktu.
+              </p>
+            </div>
+            <div class="saran-card">
+              <span class="saran-num">02</span>
+              <p>
+                Melanjutkan pengembangan ke tahap Maintenance sistem secara
+                berkala dan pemantauan keamanan rutin.
+              </p>
+            </div>
+            <div class="saran-card">
+              <span class="saran-num">03</span>
+              <p>
+                Penambahan fitur analitik & dashboard statistik nilai untuk
+                pemantauan perkembangan akademik sekolah secara jangka panjang.
+              </p>
+            </div>
+            <div class="saran-card">
+              <span class="saran-num">04</span>
+              <p>
+                Pengembangan versi mobile app native untuk meningkatkan
+                aksesibilitas orang tua dan siswa.
+              </p>
+            </div>
+          </div>
+
+          <div class="closing-thanks">
+            <h3>Terima Kasih</h3>
+            <p>Sesi Tanya Jawab & Diskusi Penguji</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Navigation Bar & Progress Indicator -->
+    <footer class="deck-footer">
+      <div class="footer-left">
+        <span class="deck-status"
+          >Rancang Bangun Sistem Informasi Rapor Digital · SMK Nangkaleah</span
+        >
+        <button
+          id="backup-toggle-btn"
+          class="backup-toggle-btn"
+          title="Buka Backup Deck (Tekan Tombol B)"
+        >
+          <span class="kbd-badge">B</span> Backup Deck (Q&amp;A)
+        </button>
+      </div>
+      <div class="footer-right">
+        <span class="page-number" id="page-number">01 / 19</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progress-bar"></div>
+      </div>
+    </footer>
+
+    <!-- Backup Deck Overlay & Separate Container (10 Slides: B1–B10) -->
+    <div
+      id="backup-deck-container"
+      class="backup-deck-container"
+      aria-hidden="true"
+    >
+      <!-- Backup Deck Top Header -->
+      <header class="backup-header">
+        <div class="backup-header-left">
+          <span class="backup-badge-pill">DECK LAMPIRAN / Q&amp;A</span>
+          <span class="backup-header-title"
+            >Dokumentasi Teknis &amp; Pengujian Lanjutan</span
+          >
+        </div>
+        <div class="backup-header-right">
+          <span class="backup-hint"
+            >Tekan <kbd>B</kbd> atau <kbd>Esc</kbd> untuk kembali ke slide
+            utama</span
+          >
+          <button
+            id="backup-close-btn"
+            class="backup-close-btn"
+            title="Keluar Mode Backup (Esc)"
+          >
+            ✕ Keluar Mode Backup
+          </button>
+        </div>
+      </header>
+
+      <!-- Backup Deck Slides Wrapper -->
+      <main id="backup-slides-wrapper" class="backup-slides-wrapper">
+        <!-- SLIDE B1: Index Backup Deck -->
+        <section
+          class="slide backup-slide active"
+          data-backup-slide="0"
+          id="slide-b1"
+        >
+          <div class="slide-inner grid-5-7">
+            <div class="col-left">
+              <div class="running-header">
+                <span class="running-title text-ink-red"
+                  >B1 · INDEX LAMPIRAN</span
+                >
+              </div>
+              <h2 class="slide-heading">Bank Konten Backup Deck</h2>
+              <p class="slide-desc">
+                Kumpulan materi lampiran teknis, detail pengujian, skema
+                database, dan bukti dokumentasi untuk mendukun sesi tanya jawab
+                bersama penguji.
+              </p>
+              <div class="quote-block">
+                <p class="quote-text">
+                  Gunakan tombol panah &larr; / &rarr; untuk berpindah antar
+                  slide backup, atau <kbd class="kbd-badge">Esc</kbd> /
+                  <kbd class="kbd-badge">B</kbd> untuk kembali ke slide utama
+                  tanpa mengubah posisi presentasi.
+                </p>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="panel-raised">
+                <h3 class="card-title text-seal-gold">
+                  Daftar Topik Lampiran (B1–B10)
+                </h3>
+                <div class="backup-index-grid">
+                  <div
+                    class="backup-index-item"
+                    onclick="window.goToBackupSlide(0)"
+                  >
+                    <span class="index-num">B1</span>
+                    <span class="index-text"
+                      >Index &amp; Navigasi Lampiran</span
+                    >
+                  </div>
+                  <div
+                    class="backup-index-item"
+                    onclick="window.goToBackupSlide(1)"
+                  >
+                    <span class="index-num">B2</span>
+                    <span class="index-text"
+                      >Arsitektur Backend Supabase &amp; RLS Model</span
+                    >
+                  </div>
+                  <div
+                    class="backup-index-item"
+                    onclick="window.goToBackupSlide(2)"
+                  >
+                    <span class="index-num">B3</span>
+                    <span class="index-text"
+                      >Detail Skema Database 9 Entitas &amp; Indexing</span
+                    >
+                  </div>
+                  <div
+                    class="backup-index-item"
+                    onclick="window.goToBackupSlide(3)"
+                  >
+                    <span class="index-num">B4</span>
+                    <span class="index-text"
+                      >Matriks Skenario Pengujian Black Box (ISO 25010)</span
+                    >
+                  </div>
+                  <div
+                    class="backup-index-item"
+                    onclick="window.goToBackupSlide(4)"
+                  >
+                    <span class="index-num">B5</span>
+                    <span class="index-text"
+                      >Rincian Skoring SUS per Role (66 Responden)</span
+                    >
+                  </div>
+                  <div
+                    class="backup-index-item"
+                    onclick="window.goToBackupSlide(5)"
+                  >
+                    <span class="index-num">B6</span>
+                    <span class="index-text"
+                      >Vulnerability Analysis &amp; Exploit Code RLS</span
+                    >
+                  </div>
+                  <div
+                    class="backup-index-item"
+                    onclick="window.goToBackupSlide(6)"
+                  >
+                    <span class="index-num">B7</span>
+                    <span class="index-text"
+                      >Kode SQL Perbaikan Policy Row Level Security</span
+                    >
+                  </div>
+                  <div
+                    class="backup-index-item"
+                    onclick="window.goToBackupSlide(7)"
+                  >
+                    <span class="index-num">B8</span>
+                    <span class="index-text"
+                      >Laporan OWASP ZAP &amp; Manual API Testing</span
+                    >
+                  </div>
+                  <div
+                    class="backup-index-item"
+                    onclick="window.goToBackupSlide(8)"
+                  >
+                    <span class="index-num">B9</span>
+                    <span class="index-text"
+                      >Dokumentasi Bukti Lapangan &amp; PDF TA</span
+                    >
+                  </div>
+                  <div
+                    class="backup-index-item"
+                    onclick="window.goToBackupSlide(9)"
+                  >
+                    <span class="index-num">B10</span>
+                    <span class="index-text"
+                      >Matriks Uji Portabilitas 5 Kombinasi Perangkat</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE B2: Detail Arsitektur Backend & RLS -->
+        <section class="slide backup-slide" data-backup-slide="1" id="slide-b2">
+          <div class="slide-inner grid-5-7">
+            <div class="col-left">
+              <div class="running-header">
+                <span class="running-title text-ink-red"
+                  >B2 · ARSITEKTUR BACKEND</span
+                >
+              </div>
+              <h2 class="slide-heading">Supabase &amp; Row Level Security</h2>
+              <p class="slide-desc">
+                Pola arsitektur Backend-as-a-Service (BaaS) berbasis PostgreSQL
+                dengan autentikasi JWT bawaan dan kebijakan proteksi data di
+                tingkat database (RLS).
+              </p>
+              <div class="tech-stack-list">
+                <div class="stack-item">
+                  <strong>Database Engine:</strong> PostgreSQL 15 dengan
+                  ekstensi PostgREST.
+                </div>
+                <div class="stack-item">
+                  <strong>Auth Service:</strong> Supabase Auth (JWT bearer
+                  token).
+                </div>
+                <div class="stack-item">
+                  <strong>Security Enforcement:</strong> Row Level Security
+                  (RLS) di level tabel.
+                </div>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="panel-raised">
+                <h3 class="card-title text-seal-gold">
+                  Alur Autentikasi &amp; Otorisasi Data
+                </h3>
+                <div class="arch-flow-diagram">
+                  <div class="flow-step">
+                    <span class="step-badge">1. Login</span>
+                    <p>
+                      Pengguna menginput credential &rarr; Supabase Auth
+                      menerbitkan JWT token yang berisi
+                      <code class="mono-code">sub (user_id)</code> dan
+                      <code class="mono-code">role</code>.
+                    </p>
+                  </div>
+                  <div class="flow-step">
+                    <span class="step-badge">2. Request</span>
+                    <p>
+                      Frontend React mengirim REST API request dengan header
+                      Authorization Bearer JWT.
+                    </p>
+                  </div>
+                  <div class="flow-step">
+                    <span class="step-badge">3. Evaluation</span>
+                    <p>
+                      PostgreSQL mengevaluasi klausa
+                      <code class="mono-code">USING</code> pada kebijakan RLS
+                      sebelum mengembalikan query data.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE B3: Detail Skema Database (9 Entitas) -->
+        <section class="slide backup-slide" data-backup-slide="2" id="slide-b3">
+          <div class="slide-inner grid-5-7">
+            <div class="col-left">
+              <div class="running-header">
+                <span class="running-title text-ink-red"
+                  >B3 · SKEMA DATABASE</span
+                >
+              </div>
+              <h2 class="slide-heading">Struktur 9 Entitas Utama</h2>
+              <p class="slide-desc">
+                Perancangan basis data relational ter-normalisasi untuk
+                mendukung seluruh alur kerja operasional rapor sekolah dari
+                input hingga verifikasi akhir.
+              </p>
+              <div class="panel-raised">
+                <h4 class="text-seal-gold" style="margin-bottom: 0.5rem">
+                  Relasi Pusat
+                </h4>
+                <p style="font-size: 0.95rem; color: var(--chalk-dim)">
+                  Entitas <code class="mono-code">siswa</code> bertindak sebagai
+                  node terpusat yang terhubung dengan
+                  <code class="mono-code">kelas</code>,
+                  <code class="mono-code">nilai</code>,
+                  <code class="mono-code">absensi</code>, dan
+                  <code class="mono-code">rapor_wali_kelas</code>.
+                </p>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="panel-raised">
+                <h3 class="card-title text-seal-gold">
+                  Daftar Tabel Database PostgreSQL
+                </h3>
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Nama Tabel</th>
+                      <th>Peran Utama</th>
+                      <th>Primary Key</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="mono-code">users</code></td>
+                      <td>Autentikasi &amp; Profil Pengguna (4 Role)</td>
+                      <td><code class="mono-code">id (UUID)</code></td>
+                    </tr>
+                    <tr>
+                      <td><code class="mono-code">siswa</code></td>
+                      <td>Data Siswa, NISN, &amp; Tingkat Kelas</td>
+                      <td><code class="mono-code">id</code></td>
+                    </tr>
+                    <tr>
+                      <td><code class="mono-code">kelas</code></td>
+                      <td>Struktur Kelas &amp; Wali Kelas Assigned</td>
+                      <td><code class="mono-code">id</code></td>
+                    </tr>
+                    <tr>
+                      <td><code class="mono-code">mapel</code></td>
+                      <td>Mata Pelajaran &amp; Bobot Nilai</td>
+                      <td><code class="mono-code">id</code></td>
+                    </tr>
+                    <tr>
+                      <td><code class="mono-code">guru_mapel</code></td>
+                      <td>Penugasan Guru pada Mapel &amp; Kelas</td>
+                      <td><code class="mono-code">id</code></td>
+                    </tr>
+                    <tr>
+                      <td><code class="mono-code">nilai</code></td>
+                      <td>Nilai Harian, PTS, PAS per Siswa</td>
+                      <td><code class="mono-code">id</code></td>
+                    </tr>
+                    <tr>
+                      <td><code class="mono-code">absensi</code></td>
+                      <td>Rekap Sakit, Izin, Tanpa Keterangan</td>
+                      <td><code class="mono-code">id</code></td>
+                    </tr>
+                    <tr>
+                      <td><code class="mono-code">rapor_wali_kelas</code></td>
+                      <td>Status Rekap, Catatan, &amp; Validation Seal</td>
+                      <td><code class="mono-code">id</code></td>
+                    </tr>
+                    <tr>
+                      <td><code class="mono-code">log_aktivitas</code></td>
+                      <td>Audit Trail Akses &amp; Perubahan Data</td>
+                      <td><code class="mono-code">id</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE B4: Detail Black Box Testing (ISO 25010) -->
+        <section class="slide backup-slide" data-backup-slide="3" id="slide-b4">
+          <div class="slide-inner grid-5-7">
+            <div class="col-left">
+              <div class="running-header">
+                <span class="running-title text-ink-red"
+                  >B4 · BLACK BOX TESTING</span
+                >
+              </div>
+              <h2 class="slide-heading">Matriks 7 Skenario Uji Fungsional</h2>
+              <p class="slide-desc">
+                Pengujian 5 teknik (Equivalence Partitioning, Boundary Value
+                Analysis, Decision Table, State Transition, Scenario-Based)
+                menghasilkan tingkat kelayakan 100%.
+              </p>
+              <div class="stat-callout">
+                <span class="stat-number text-seal-gold">100%</span>
+                <span class="stat-label">7 dari 7 Skenario Valid</span>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="panel-raised">
+                <h3 class="card-title text-seal-gold">
+                  Rincian Test Case Fungsional
+                </h3>
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Fitur</th>
+                      <th>Teknik Uji</th>
+                      <th>Hasil Expected</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Hak Akses Berjenjang</td>
+                      <td>Decision Table</td>
+                      <td>Akses sesuai role 4 pengguna</td>
+                      <td><span class="badge-pass">VALID</span></td>
+                    </tr>
+                    <tr>
+                      <td>Input Nilai Mapel</td>
+                      <td>Boundary Value Analysis</td>
+                      <td>Rentang nilai 0–100 valid</td>
+                      <td><span class="badge-pass">VALID</span></td>
+                    </tr>
+                    <tr>
+                      <td>Perhitungan Otomatis</td>
+                      <td>Equivalence Partitioning</td>
+                      <td>Formula bobot presisi 100%</td>
+                      <td><span class="badge-pass">VALID</span></td>
+                    </tr>
+                    <tr>
+                      <td>Monitoring Wali Kelas</td>
+                      <td>Scenario-Based</td>
+                      <td>Progress kelas ter-update real-time</td>
+                      <td><span class="badge-pass">VALID</span></td>
+                    </tr>
+                    <tr>
+                      <td>Koreksi Data Nilai</td>
+                      <td>State Transition</td>
+                      <td>Log audit mencatat revisi</td>
+                      <td><span class="badge-pass">VALID</span></td>
+                    </tr>
+                    <tr>
+                      <td>Akses Rapor Online</td>
+                      <td>Scenario-Based</td>
+                      <td>Siswa hanya lihat nilai milik sendiri</td>
+                      <td><span class="badge-pass">VALID</span></td>
+                    </tr>
+                    <tr>
+                      <td>Cetak Rapor &amp; PDF</td>
+                      <td>Scenario-Based</td>
+                      <td>Format PDF presisi cetak fisik</td>
+                      <td><span class="badge-pass">VALID</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE B5: Rincian Skoring SUS per Role -->
+        <section class="slide backup-slide" data-backup-slide="4" id="slide-b5">
+          <div class="slide-inner grid-5-7">
+            <div class="col-left">
+              <div class="running-header">
+                <span class="running-title text-ink-red"
+                  >B5 · USABILITY BREAKDOWN</span
+                >
+              </div>
+              <h2 class="slide-heading">Skoring SUS 66 Responden</h2>
+              <p class="slide-desc">
+                Pengukuran kemudahan penggunaan menggunakan instrumen System
+                Usability Scale (10 pertanyaan skala Likert 1–5).
+              </p>
+              <div class="formula-box">
+                <span class="formula-title">Rumus Skor SUS:</span>
+                <code class="mono-code"
+                  >Skor = 2.5 × [ Σ(Q_ganjil - 1) + Σ(5 - Q_genap) ]</code
+                >
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="panel-raised">
+                <h3 class="card-title text-seal-gold">
+                  Breakdown Skor SUS per Kelompok Role
+                </h3>
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Role Responden</th>
+                      <th>Jumlah (N)</th>
+                      <th>Rata-rata Skor SUS</th>
+                      <th>Kategori Adopsi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Siswa</td>
+                      <td>48 Responden</td>
+                      <td><span class="data-mono">68,33</span></td>
+                      <td>Acceptable (Marginal High)</td>
+                    </tr>
+                    <tr>
+                      <td>Guru Mata Pelajaran</td>
+                      <td>10 Responden</td>
+                      <td><span class="data-mono">83,00</span></td>
+                      <td>Excellent (Grade A)</td>
+                    </tr>
+                    <tr>
+                      <td>Wali Kelas</td>
+                      <td>6 Responden</td>
+                      <td><span class="data-mono">80,83</span></td>
+                      <td>Good (Grade B)</td>
+                    </tr>
+                    <tr>
+                      <td>Kepala Sekolah</td>
+                      <td>1 Responden</td>
+                      <td><span class="data-mono">82,50</span></td>
+                      <td>Excellent (Grade A)</td>
+                    </tr>
+                    <tr>
+                      <td>Tata Usaha (TU)</td>
+                      <td>1 Responden</td>
+                      <td><span class="data-mono">82,50</span></td>
+                      <td>Excellent (Grade A)</td>
+                    </tr>
+                    <tr class="table-total-row">
+                      <td><strong>Rata-rata Gabungan</strong></td>
+                      <td><strong>66 Responden</strong></td>
+                      <td>
+                        <strong class="text-seal-gold data-mono">72,12</strong>
+                      </td>
+                      <td>
+                        <strong class="text-seal-gold"
+                          >Acceptable (Grade C+)</strong
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE B6: Vulnerability RLS & Kode Exploit SQL (KARAKTER DEMI KARAKTER SAMA DENGAN UI.MD) -->
+        <section class="slide backup-slide" data-backup-slide="5" id="slide-b6">
+          <div class="slide-inner grid-5-7">
+            <div class="col-left">
+              <div class="running-header">
+                <span class="running-title text-ink-red"
+                  >B6 · SECURITY VULNERABILITY</span
+                >
+              </div>
+              <h2 class="slide-heading">
+                Detail Celah Keamanan RLS Tabel
+                <code class="mono-code">users</code>
+              </h2>
+              <p class="slide-desc text-ink-red">
+                Temuan celah Confidentiality pada kebijakan awal Row Level
+                Security (RLS) yang menyebabkan pass rate awal hanya 75%.
+              </p>
+              <div class="quote-block alert-border">
+                <p class="quote-text">
+                  <strong>Penyebab Masalah:</strong> Kebijakan RLS awal memakai
+                  klausa
+                  <code class="mono-code">auth.role() = 'authenticated'</code>
+                  tanpa mengecek keterikatan
+                  <code class="mono-code">auth.uid() = id</code>. Akibatnya,
+                  akun siswa dapat membaca seluruh 109 baris data pengguna lain.
+                </p>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="panel-raised">
+                <h3 class="card-title text-ink-red">
+                  Kode SQL Policy Bermasalah (Sebelum Perbaikan)
+                </h3>
+                <div class="code-editor-block">
+                  <div class="code-editor-header">
+                    <span class="code-file"
+                      >schema_vulnerability_before.sql</span
+                    >
+                    <span class="code-status text-ink-red"
+                      >❌ Pass Rate Security: 75%</span
+                    >
+                  </div>
+                  <pre
+                    class="code-content"
+                  ><code class="language-sql">-- Kebijakan RLS yang bermasalah (Sebelum Perbaikan):
+CREATE POLICY "Enable read access for authenticated users" 
+ON public.users 
+FOR SELECT 
+TO authenticated 
+USING (
+  auth.role() = 'authenticated'
+);</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE B7: Kode SQL Perbaikan RLS (WAJIB PAKAI TEXT PLACEHOLDER PERSIS) -->
+        <section class="slide backup-slide" data-backup-slide="6" id="slide-b7">
+          <div class="slide-inner grid-5-7">
+            <div class="col-left">
+              <div class="running-header">
+                <span class="running-title text-seal-gold"
+                  >B7 · PERBAIKAN SECURITY RLS</span
+                >
+              </div>
+              <h2 class="slide-heading">Kebijakan RLS Setelah Perbaikan</h2>
+              <p class="slide-desc">
+                Perbaikan Row Level Security untuk menjamin privasi data antar
+                role (pass rate naik menjadi 100%).
+              </p>
+              <div class="stat-callout">
+                <span class="stat-number text-seal-gold">100%</span>
+                <span class="stat-label"
+                  >Pass Rate Pengujian Keamanan (4/4 Skenario)</span
+                >
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="panel-raised">
+                <h3 class="card-title text-seal-gold">
+                  Kode SQL Perbaikan RLS
+                </h3>
+                <div class="code-editor-block">
+                  <div class="code-editor-header">
+                    <span class="code-file">schema_security_patch.sql</span>
+                    <span class="code-status text-seal-gold"
+                      >✓ Pass Rate Security: 100%</span
+                    >
+                  </div>
+                  <pre
+                    class="code-content"
+                  ><code class="language-sql">-- 1. Hapus policy yang bermasalah
+drop policy "users_select_own_or_staff" on public.users;
+
+-- 2. Buat fungsi helper yang bypass RLS saat mengecek role
+create or replace function public.get_my_role()
+returns text
+language sql
+security definer
+set search_path = public
+stable
+as $$
+  select role from public.users where id = auth.uid()
+$$;
+
+-- 3. Buat ulang policy pakai fungsi tersebut (bukan subquery langsung ke tabel users)
+create policy "users_select_own_or_staff"
+on public.users
+for select
+using (
+  auth.uid() = id
+  or public.get_my_role() in ('TU', 'KEPALA_SEKOLAH')
+);</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE B8: Laporan OWASP ZAP & Manual API Testing -->
+        <section class="slide backup-slide" data-backup-slide="7" id="slide-b8">
+          <div class="slide-inner grid-5-7">
+            <div class="col-left">
+              <div class="running-header">
+                <span class="running-title text-ink-red"
+                  >B8 · OWASP ZAP &amp; PENETRATION</span
+                >
+              </div>
+              <h2 class="slide-heading">Detail Pengujian Keamanan System</h2>
+              <p class="slide-desc">
+                Pengujian penetrasi otomatis menggunakan OWASP ZAP dipadukan
+                dengan pengujian skenario manual API.
+              </p>
+              <div class="panel-raised">
+                <h4 class="text-seal-gold" style="margin-bottom: 0.5rem">
+                  OWASP ZAP Active Scan
+                </h4>
+                <p style="font-size: 0.95rem; color: var(--chalk-dim)">
+                  23 automated requests menyerang endpoint REST &amp; Auth
+                  Supabase &rarr;
+                  <strong class="text-seal-gold"
+                    >0 vulnerability tereksploitasi</strong
+                  >.
+                </p>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="panel-raised">
+                <h3 class="card-title text-seal-gold">
+                  Hasil OWASP ZAP Passive Scan (15 Alert)
+                </h3>
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Tingkat Risiko</th>
+                      <th>Jumlah Alert</th>
+                      <th>Keterangan Alert Temuan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="badge-risk-high">High Risk</span></td>
+                      <td><span class="data-mono">0 Alert</span></td>
+                      <td>Tidak ditemukan celah injeksi kritis</td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge-risk-med">Medium Risk</span></td>
+                      <td><span class="data-mono">3 Alert</span></td>
+                      <td>
+                        Missing Anti-clickjacking &amp; X-Content-Type headers
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge-risk-low">Low / Info</span></td>
+                      <td><span class="data-mono">12 Alert</span></td>
+                      <td>
+                        Cookie SameSite &amp; Cache-Control headers
+                        configuration
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE B9: Dokumentasi Bukti Lapangan (WAJIB PAKAI TEXT PLACEHOLDER JUJUR) -->
+        <section class="slide backup-slide" data-backup-slide="8" id="slide-b9">
+          <div class="slide-inner grid-5-7">
+            <div class="col-left">
+              <div class="running-header">
+                <span class="running-title text-ink-red"
+                  >B9 · BUKTI DOKUMENTASI</span
+                >
+              </div>
+              <h2 class="slide-heading">
+                Dokumentasi Uji Coba &amp; Wawancara
+              </h2>
+              <p class="slide-desc">
+                Bukti dokumentasi pelaksanaan penelitian lapangan dan pengujian
+                aplikasi bersama civitas SMK Nangkaleah.
+              </p>
+              <div class="quote-block">
+                <p class="quote-text">
+                  Dokumentasi resmi yang tercantum pada naskah Skripsi/Tugas
+                  Akhir.
+                </p>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="panel-raised">
+                <h3 class="card-title text-seal-gold">
+                  Screenshot Lampiran Naskah TA
+                </h3>
+                <div class="honest-placeholder-box">
+                  [TEMPEL SCREENSHOT ASLI DARI FILE PDF TA DI FOLDER ASSETS]
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE B10: Matriks Uji Portabilitas 5 Kombinasi Perangkat -->
+        <section
+          class="slide backup-slide"
+          data-backup-slide="9"
+          id="slide-b10"
+        >
+          <div class="slide-inner grid-5-7">
+            <div class="col-left">
+              <div class="running-header">
+                <span class="running-title text-ink-red"
+                  >B10 · PORTABILITY MATRIX</span
+                >
+              </div>
+              <h2 class="slide-heading">
+                Pengujian Lintas Perangkat &amp; Browser
+              </h2>
+              <p class="slide-desc">
+                Pengujian portabilitas pada 5 kombinasi perangkat dan
+                perbandingan skor penilaian oleh 5 role pengguna.
+              </p>
+              <div class="stat-callout">
+                <span class="stat-number text-seal-gold">3,90</span>
+                <span class="stat-label"
+                  >Skor Rata-Rata Portabilitas (Kategori Baik)</span
+                >
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="panel-raised">
+                <h3 class="card-title text-seal-gold">
+                  Matriks Uji 5 Kombinasi Environment
+                </h3>
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Platform / Browser</th>
+                      <th>Resolusi Tested</th>
+                      <th>Status Layout &amp; Fungsi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Google Chrome Desktop (Win 11)</td>
+                      <td>1920 × 1080 (FHD)</td>
+                      <td>
+                        <span class="badge-pass">RESPONSIF &amp; NORMAL</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Mozilla Firefox Desktop (Win 11)</td>
+                      <td>1920 × 1080 (FHD)</td>
+                      <td>
+                        <span class="badge-pass">RESPONSIF &amp; NORMAL</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft Edge Desktop (Win 11)</td>
+                      <td>1920 × 1080 (FHD)</td>
+                      <td>
+                        <span class="badge-pass">RESPONSIF &amp; NORMAL</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Chrome Mobile (Android 13)</td>
+                      <td>390 × 844 (Mobile)</td>
+                      <td>
+                        <span class="badge-pass">RESPONSIF &amp; NORMAL</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Safari / Chrome Tablet (iPadOS)</td>
+                      <td>810 × 1080 (Tablet)</td>
+                      <td>
+                        <span class="badge-pass">RESPONSIF &amp; NORMAL</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Backup Deck Footer -->
+      <footer class="backup-footer">
+        <div class="footer-left">
+          <span class="deck-status text-ink-red"
+            >MODE BACKUP DECK · Sidang TA Ayi Muhamad Nasrulloh</span
+          >
+        </div>
+        <div class="footer-right">
+          <span class="page-number text-seal-gold" id="backup-page-number"
+            >BACKUP B01 / B10</span
+          >
+        </div>
+        <div class="progress-bar-track">
+          <div
+            class="progress-bar-fill bg-seal-gold"
+            id="backup-progress-bar"
+          ></div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
